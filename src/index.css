@@ -1,11 +1,144 @@
 @import "tailwindcss";
+@import "./tailwind.custom.css";
+
+#root {
+  font-family: 'Hanken Grotesk';
+  font-size: 18px;
+
+  @apply  
+      bg-[url(/design/mobile-design.jpg)] sm:bg-[url(/design/desktop-design.jpg)]
+      flex h-screen w-screen justify-center items-center;
+}
+
+h1 {
+  display: none;
+}
+
+h2 {
+
+}
+
 
 @font-face {
   font-family: 'Hanken Grotesk' ;
   src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
-#root {
-  font-family: 'Hanken Grotesk';
-  font-size: 18px;
+
+.card {
+  @apply w-full h-full;
+}
+
+.blue-box-container {
+  @apply 
+      bg-linear-to-b to-bg-LightRoyalBlue from-bg-LightSlateBlue
+      w-full h-21/48 pt-5 pb-10 rounded-b-4xl
+      flex flex-col items-center justify-between;
+}
+
+.blue-box-title {
+  @apply text-nt-LightLavender;
+}
+
+.score-area {
+  @apply
+      bg-linear-to-b from-cl-VioletBlue to-cl-PersianBlue
+      w-3/8 aspect-square pt-5 pb-2 rounded-full
+      flex flex-col items-center justify-center;
+}
+
+.score-result {
+  @apply
+      text-white text-6xl font-bold;
+}
+
+.score-total {
+  @apply
+      text-nt-LightLavender;
+}
+
+.response-score-area {
+  @apply
+      w-3/4
+      flex flex-col items-center justify-between;
+}
+
+.response-score-grade {
+  @apply
+      pb-2 pr-1
+      text-white text-2xl font-semibold;
+}
+
+.response-score-test {
+  @apply
+      flex flex-col justify-end gap-0 text-center
+      text-nt-LightLavender text-base/5;
+}
+
+.white-box-container {
+  @apply
+      w-full h-27/48 pt-6 pb-7.5 px-7.5
+      flex flex-col items-center justify-between
+}
+
+.white-box-title {
+  @apply
+      pl-0.5
+      self-start
+}
+
+.white-box-ul {
+  @apply
+      w-full h-full mb-1 py-0.5
+      flex flex-col justify-evenly
+}
+
+.white-box-li {
+  @apply
+    w-full py-4 px-4 rounded-xl
+    flex justify-between
+    text-base font-semibold;
+  }
+  
+.red {
+  @apply
+      bg-pr-LightRed/10
+      text-pr-LightRed
+}
+
+.yellow {
+  @apply
+      bg-pr-OrangeyYellow/10
+      text-pr-OrangeyYellow
+}
+
+.green {
+  @apply
+      bg-pr-GreenTeal/10
+      text-pr-GreenTeal
+}
+
+.blue {
+  @apply
+      bg-pr-CobaltBlue/10
+      text-pr-CobaltBlue
+}
+
+.black {
+  @apply
+      text-black
+}
+
+.gray {
+  @apply
+      ml-1 text-gray-500
+}
+
+.btn {
+  @apply
+      bg-nt-DarkGrayBlue/50
+      w-full pt-4 pb-3.5 rounded-full
+      text-white
+      hover:bg-linear-to-b to-bg-LightRoyalBlue from-bg-LightSlateBlue
+      cursor-pointer transition duration-300 ease-in-out;
 }

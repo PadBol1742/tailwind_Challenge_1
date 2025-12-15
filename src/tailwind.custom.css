@@ -23,4 +23,12 @@
     --color-nt-PaleBlue: hsl(221, 100%, 96%);
     --color-nt-LightLavender: hsl(241, 100%, 89%);
     --color-nt-DarkGrayBlue: hsl(224, 30%, 27%);
+
+    /* Flashy Working */
+
+    --color-wk-LightRed: hsla(0, 100%, 67%, 0.500);
+    --color-wk-OrangeyYellow: hsla(39, 100%, 56%, 0.500);
+
+    /* Text et bulle */
+    --color-rd: hsla(0, 48%, 62%, 0.5);
 }
