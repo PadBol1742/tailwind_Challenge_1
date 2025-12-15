@@ -1,0 +1,26 @@
+@theme {
+
+    /* Colors */
+    /* *Primary */
+    --color-pr-LightRed: hsl(0, 100%, 67%);
+    --color-pr-OrangeyYellow: hsl(39, 100%, 56%);
+    --color-pr-GreenTeal: hsl(166, 100%, 37%);
+    --color-pr-CobaltBlue: hsl(234, 85%, 45%);
+
+    /* Gradients */
+
+    --color-bg-LightSlateBlue: hsl(252, 100%, 67%);
+    --color-bg-LightRoyalBlue: hsl(241, 81%, 54%);
+
+    --color-cl-VioletBlue: hsla(256, 72%, 46%, 1);
+    --color-cl-PersianBlue: hsla(241, 72%, 46%, 0);
+
+
+
+    /* Neutral */
+
+    --color-nt-White: hsl(0, 0%, 100%);
+    --color-nt-PaleBlue: hsl(221, 100%, 96%);
+    --color-nt-LightLavender: hsl(241, 100%, 89%);
+    --color-nt-DarkGrayBlue: hsl(224, 30%, 27%);
+}
