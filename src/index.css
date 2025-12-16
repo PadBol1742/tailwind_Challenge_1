@@ -1,144 +1,183 @@
 @import "tailwindcss";
 @import "./tailwind.custom.css";
 
-#root {
+#root
+{
   font-family: 'Hanken Grotesk';
   font-size: 18px;
 
-  @apply  
-      bg-[url(/design/mobile-design.jpg)] sm:bg-[url(/design/desktop-design.jpg)]
-      flex h-screen w-screen justify-center items-center;
+  @apply
+      /* bg-[url(/design/mobile-design.jpg)] sm:bg-[url(/design/desktop-design.jpg)] */
+      bg-nt-PaleBlue
+      h-screen w-screen
+      flex justify-center items-center;
 }
 
-h1 {
+h1
+{
   display: none;
 }
 
-h2 {
-
-}
-
-
-@font-face {
-  font-family: 'Hanken Grotesk' ;
+@font-face
+{
+  font-family: 'Hanken Grotesk';
   src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
 }
 
-
-.card {
-  @apply w-full h-full;
+.card
+{
+  @apply
+      bg-nt-White
+      w-full h-full sm:w-184 sm:h-128
+      sm:rounded-4xl
+      sm:flex;
 }
 
-.blue-box-container {
-  @apply 
-      bg-linear-to-b to-bg-LightRoyalBlue from-bg-LightSlateBlue
-      w-full h-21/48 pt-5 pb-10 rounded-b-4xl
+/* #region Blue Box Container */
+
+.blue-box-container
+{
+  @apply
+      bg-linear-to-b from-bg-LightSlateBlue to-bg-LightRoyalBlue
+      w-full sm:w-1/2 h-21/48 sm:h-full
+      pt-5 pb-10 sm:pt-9.5 sm:pb-14
+      rounded-b-4xl sm:rounded-4xl
       flex flex-col items-center justify-between;
 }
 
-.blue-box-title {
-  @apply text-nt-LightLavender;
+.blue-box-title
+{
+  @apply
+  sm:pr-1.5
+  text-nt-LightLavender sm:text-2xl sm:font-semibold;
 }
 
-.score-area {
+.score-area
+{
   @apply
-      bg-linear-to-b from-cl-VioletBlue to-cl-PersianBlue
-      w-3/8 aspect-square pt-5 pb-2 rounded-full
-      flex flex-col items-center justify-center;
+  bg-linear-to-b from-cl-VioletBlue to-cl-PersianBlue
+  w-3/8 sm:w-13/24 aspect-square pt-5 pb-2 rounded-full
+  flex flex-col items-center justify-center;
 }
 
-.score-result {
+.score-result
+{
   @apply
-      text-white text-6xl font-bold;
+  text-white text-6xl sm:text-7xl font-bold;
 }
 
-.score-total {
-  @apply
-      text-nt-LightLavender;
+.score-total
+{
+  @apply      
+  text-nt-LightLavender;
 }
 
-.response-score-area {
+.response-score-area
+{
   @apply
-      w-3/4
+  w-17/24
+  flex flex-col items-center justify-between;
+}
+
+.response-score-grade
+{
+  @apply
+  pb-2 pr-1.5 sm:mb-3
+  text-white text-2xl sm:text-3xl font-semibold sm:tracking-wide;
+}
+
+.response-score-text
+{
+  @apply
+  flex flex-col justify-end gap-0 text-center
+  text-nt-LightLavender text-base/5 sm:text-lg/5.5;
+}
+
+/* #endregion */
+
+.white-box-container
+{
+  @apply
+      w-full sm:w-1/2 h-27/48 sm:h-full
+      pt-6 pb-7.5 px-7.5 sm:pt-9 sm:pb-11.5 sm:px-10
+      sm:rounded-r-4xl
       flex flex-col items-center justify-between;
 }
 
-.response-score-grade {
+.white-box-title
+{
   @apply
-      pb-2 pr-1
-      text-white text-2xl font-semibold;
-}
-
-.response-score-test {
-  @apply
-      flex flex-col justify-end gap-0 text-center
-      text-nt-LightLavender text-base/5;
-}
-
-.white-box-container {
-  @apply
-      w-full h-27/48 pt-6 pb-7.5 px-7.5
-      flex flex-col items-center justify-between
-}
-
-.white-box-title {
-  @apply
-      pl-0.5
+      pl-0.5 sm:pl-0
       self-start
+      sm:text-2xl sm:font-semibold;
 }
 
-.white-box-ul {
+.white-box-ul
+{
   @apply
-      w-full h-full mb-1 py-0.5
-      flex flex-col justify-evenly
+      w-full h-full
+      mb-1 py-0.5 sm:mb-3 sm:py-3.5
+      flex flex-col justify-evenly;
 }
 
-.white-box-li {
+.white-box-li
+{
   @apply
-    w-full py-4 px-4 rounded-xl
-    flex justify-between
-    text-base font-semibold;
-  }
-  
-.red {
+      w-full py-4 px-4 rounded-xl
+      flex justify-between
+      text-base sm:text-lg font-semibold;
+}
+
+.icon
+{
+  @apply inline mr-3;
+}
+
+.red
+{
   @apply
       bg-pr-LightRed/10
-      text-pr-LightRed
+      text-pr-LightRed;
 }
 
-.yellow {
+.yellow
+{
   @apply
       bg-pr-OrangeyYellow/10
-      text-pr-OrangeyYellow
+      text-pr-OrangeyYellow;
 }
 
-.green {
+.green
+{
   @apply
       bg-pr-GreenTeal/10
-      text-pr-GreenTeal
+      text-pr-GreenTeal;
 }
 
-.blue {
+.blue
+{
   @apply
       bg-pr-CobaltBlue/10
-      text-pr-CobaltBlue
+      text-pr-CobaltBlue;
 }
 
-.black {
-  @apply
-      text-black
+.black
+{
+  @apply text-black;
 }
 
-.gray {
+.gray
+{
   @apply
-      ml-1 text-gray-500
+      ml-1
+      text-gray-500;
 }
 
-.btn {
+.btn
+{
   @apply
-      bg-nt-DarkGrayBlue/50
+      bg-nt-DarkGrayBlue
       w-full pt-4 pb-3.5 rounded-full
       text-white
-      hover:bg-linear-to-b to-bg-LightRoyalBlue from-bg-LightSlateBlue
-      cursor-pointer transition duration-300 ease-in-out;
+      hover:bg-linear-to-b from-bg-LightSlateBlue to-bg-LightRoyalBlue hover:cursor-pointer transition duration-300 ease-in-out;
 }
